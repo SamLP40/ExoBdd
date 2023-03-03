@@ -45,5 +45,11 @@ public class Article {
 	public void setUnitaryPrice(double unitaryPrice) {
 		this.unitaryPrice = unitaryPrice;
 	}
+
+	@Override
+	public String toString() {
+		return "Article [idArticle=" + idArticle + ", description=" + description + ", brand=" + brand
+				+ ", unitaryPrice=" + unitaryPrice + "]";
+	}
 	
 }

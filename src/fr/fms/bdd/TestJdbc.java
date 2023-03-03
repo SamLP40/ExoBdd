@@ -1,3 +1,8 @@
+/**
+ * Programme de connexion à la base MariaDB.
+ * 
+ * @author Le-porcherS - 3-3-2023
+ */
 package fr.fms.bdd;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +13,11 @@ import java.util.ArrayList;
 import fr.fms.entities.Article;
 
 public class TestJdbc {
-
+/**
+ * 
+ * @param args
+ * @throws Exception
+ */
 	public static void main (String[] args) throws Exception {
 
 		ArrayList<Article> articles = new ArrayList<Article>();
@@ -42,8 +51,8 @@ public class TestJdbc {
 								while(resultSet.next()) {
 									int rsIdArticle = resultSet.getInt(1);
 									String rsDescription = resultSet.getString(2);
-									String rsBrand = resultSet.getString(3);
-									double rsUnitaryPrice = resultSet.getDouble(4);
+									String rsBrand = resultSet.getString(3); // valeur entrée en sql = varchar
+									double rsUnitaryPrice = resultSet.getDouble(4); // valeur entrée en SQL = float
 									articles.add(new Article(rsIdArticle,rsDescription,rsBrand,rsUnitaryPrice));
 								}
 							}
@@ -56,6 +65,14 @@ public class TestJdbc {
 
 			} connection.close();
 		} 
+	}
+/**
+ * 
+ * @return
+ */
+	public static Connection getConnection() {
+	
+		return null;
 	} 
 }
 

@@ -1,3 +1,7 @@
+/**
+ * Programme de configuration qui lit le fichier config.properties permettant la connexion à MariaDB.
+ * @author Le-porcherS 3-3-2023
+ */
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
